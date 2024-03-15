@@ -72,7 +72,7 @@ class GiftCardController extends Controller
             'is_activated' => 'nullable',
             'is_expired' => 'nullable'
             ],
-            message: __('GiftCard updated successfully'),
+            message: __('Gift Card created successfully'),
             redirect: 'admin.gift-cards.index',
         );
 
@@ -118,7 +118,7 @@ class GiftCardController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'account_id' => 'nullable|exists:accounts,id',
+            'account_id' => 'nullable|exists:accounts,id',
             'name' => 'sometimes|max:255|string',
             'code' => 'sometimes|max:255|string',
             'balance' => 'nullable',
@@ -126,7 +126,7 @@ class GiftCardController extends Controller
             'is_activated' => 'nullable',
             'is_expired' => 'nullable'
             ],
-            message: __('GiftCard updated successfully'),
+            message: __('Gift Card updated successfully'),
             redirect: 'admin.gift-cards.index',
         );
 
@@ -145,7 +145,7 @@ class GiftCardController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('GiftCard deleted successfully'),
+            message: __('Gift Card deleted successfully'),
             redirect: 'admin.gift-cards.index',
         );
 

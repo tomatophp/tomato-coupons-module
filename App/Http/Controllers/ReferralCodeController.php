@@ -64,14 +64,14 @@ class ReferralCodeController extends Controller
             request: $request,
             model: \Modules\TomatoCoupons\App\Models\ReferralCode::class,
             validation: [
-                            'account_id' => 'nullable|exists:accounts,id',
+            'account_id' => 'nullable|exists:accounts,id',
             'name' => 'required|max:255|string',
             'code' => 'required|max:255|string',
             'counter' => 'nullable',
             'is_activated' => 'nullable',
             'is_public' => 'nullable'
             ],
-            message: __('ReferralCode updated successfully'),
+            message: __('Referral Code created successfully'),
             redirect: 'admin.referral-codes.index',
         );
 
@@ -117,14 +117,14 @@ class ReferralCodeController extends Controller
             request: $request,
             model: $model,
             validation: [
-                            'account_id' => 'nullable|exists:accounts,id',
+            'account_id' => 'nullable|exists:accounts,id',
             'name' => 'sometimes|max:255|string',
             'code' => 'sometimes|max:255|string',
             'counter' => 'nullable',
             'is_activated' => 'nullable',
             'is_public' => 'nullable'
             ],
-            message: __('ReferralCode updated successfully'),
+            message: __('Referral Code updated successfully'),
             redirect: 'admin.referral-codes.index',
         );
 
@@ -143,7 +143,7 @@ class ReferralCodeController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('ReferralCode deleted successfully'),
+            message: __('Referral Code deleted successfully'),
             redirect: 'admin.referral-codes.index',
         );
 
