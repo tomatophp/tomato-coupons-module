@@ -56,7 +56,7 @@ class GiftCardTable extends AbstractTable
             ->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
                 each: fn (\Modules\TomatoCoupons\App\Models\GiftCard $model) => $model->delete(),
-                after: fn () => Toast::danger(__('GiftCard Has Been Deleted'))->autoDismiss(2),
+                after: fn () => Toast::danger(__('Gift Card Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             )
             ->defaultSort('id', 'desc')

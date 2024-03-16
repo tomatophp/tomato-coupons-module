@@ -83,7 +83,7 @@ class CouponController extends Controller
                 'apply_to' => 'nullable',
                 'except' => 'nullable'
             ],
-            message: __('Coupon updated successfully'),
+            message: __('Coupon created successfully'),
             redirect: 'admin.coupons.index',
         );
 

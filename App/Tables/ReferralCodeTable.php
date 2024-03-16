@@ -56,7 +56,7 @@ class ReferralCodeTable extends AbstractTable
             ->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
                 each: fn (\Modules\TomatoCoupons\App\Models\ReferralCode $model) => $model->delete(),
-                after: fn () => Toast::danger(__('ReferralCode Has Been Deleted'))->autoDismiss(2),
+                after: fn () => Toast::danger(__('Referral Code Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             )
             ->defaultSort('id', 'desc')
